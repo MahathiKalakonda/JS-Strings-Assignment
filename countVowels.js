@@ -1,21 +1,15 @@
-function getVowelsCount(word)
+function getMatchedCount(regularExpression, word)
 {
-    let vowelsRegEx = /[aeiouAEIOU]/g;
-    let vowelsInWord = word.match(vowelsRegEx);
-    let vowelsCount = vowelsInWord.length;
+    let matchedWords = word.match(regularExpression);
+    let vowelsCount = matchedWords.length;
     return vowelsCount;
 }
 
-function printVowelCount(word, count)
-{
-    console.log("Number of vowels in " + word +" is : " + count);
-}
 
 function main()
 {
-    let word = "CoffEe";
-    let vowelCount = getVowelsCount(word);
-    printVowelCount(word, vowelCount);
+    let word = "CoffEe", vowelsRegExp = /[aeiouAEIOU]/g;
+    console.log("Number of vowels in " + word +" is : " + getMatchedCount(vowelsRegExp, word));
 }
 
 main()
