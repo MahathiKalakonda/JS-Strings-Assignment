@@ -1,17 +1,17 @@
-function getTitledCase(word)
+function getTitleCase(word)
 {
     return word[0].toUpperCase()+word.slice(1);
 }
 
-function getCamelCaseString(words)
+function getCamelCase(words)
 {
-    camelCaseString = words[0].toLowerCase();
+    camelCase = words[0].toLowerCase();
     for(let index = 1; index < words.length; index++)
     {
-        let titledWord = getTitledCase(words[index].toLowerCase());
-        camelCaseString = camelCaseString.concat(titledWord);
+        let titleCaseWord = getTitleCase(words[index].toLowerCase());
+        camelCase = camelCase.concat(titleCaseWord);
     }
-    return camelCaseString;
+    return camelCase;
 }
 
 function printCamelCaseWord(camelCaseWord)
@@ -21,7 +21,7 @@ function printCamelCaseWord(camelCaseWord)
 
 function main()
 {
-    printCamelCaseWord(getCamelCaseString(["this", "is", "mY", "sandWich"]));
+    console.log("Camel case word is : " + getCamelCase(["this", "is", "mY", "sandWich"]));
 }
 
 main();
