@@ -9,15 +9,10 @@ function getReverseWordOrder(string)
     return reverseWordsString;
 }
 
-function printReverseOrderWords(string, reverseOrderString)
-{
-    console.log("The reverse order of string : " + string + " is : " + reverseOrderString);
-}
-
 function main()
 {
     let string = "Joey does not share  food";
-    printReverseOrderWords(string, getReverseWordOrder(string));
+    console.log("The reverse order of string : " + string + " is : " + getReverseWordOrder(string));
 }
 
 main()
