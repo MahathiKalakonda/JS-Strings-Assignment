@@ -1,23 +1,18 @@
-function getReverseString(string)
+function getReverseWord(word)
 {
-    let reversedString = "";
-    for(let index = 0; index < string.length; index++)
+    let reversedWord = "";
+    for(let index = 0; index < word.length; index++)
     {
-        let complimentaryIndex = string.length - index - 1;
-        reversedString = reversedString.concat(string[complimentaryIndex]);
+        let complimentaryIndex = word.length - index - 1;
+        reversedWord = reversedWord.concat(word[complimentaryIndex]);
     }
-    return reversedString;
-}
-
-function printReversedString(string, reversedString)
-{
-    console.log("Reverse of " + string +" is : " + reversedString);
+    return reversedWord;
 }
 
 function main()
 {
-    printReversedString("Mahathi", getReverseString("Mahathi"));
-    printReversedString("Thank You", getReverseString("Thank You"));
+    console.log("Reverse of Mahathi is : " + getReverseWord("Mahathi"));
+    console.log("Reverse of Thank You is : " + getReverseWord("Thank You"));
 }
 
 main();
