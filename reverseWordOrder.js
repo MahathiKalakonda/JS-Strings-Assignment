@@ -1,12 +1,12 @@
 function getReverseWordOrder(string)
 {
-    let reverseWordsList = [], wordsList = string.split(" ");
-    for(let index = 0; index < wordsList.length; index++)
+    let reverseWords = [], words = string.split(" ");
+    for(let index = 0; index < words.length; index++)
     {
-        reverseWordsList.unshift(wordsList[index]);
+        reverseWords.unshift(words[index]);
     }
-    reverseWordsString = reverseWordsList.join(" ");
-    return reverseWordsString;
+    reversedWords = reverseWords.join(" ");
+    return reversedWords;
 }
 
 function main()
