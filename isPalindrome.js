@@ -15,15 +15,10 @@ function isPalindrome(word)
     return true;
 }
 
-function printIsPalindrome(word, palindromeStatus)
-{
-    console.log(word + " is palindrome : " + palindromeStatus)
-}
-
 function main()
 {
-    printIsPalindrome("madam", isPalindrome("madam"));
-    printIsPalindrome("Madam", isPalindrome("Madam"));
+    console.log("madam is palindrome : " + isPalindrome("madam"));
+    console.log("Madam is palindrome : " + isPalindrome("Madam"));
 }
 
 main()
