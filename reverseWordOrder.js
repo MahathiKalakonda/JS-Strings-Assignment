@@ -1,4 +1,4 @@
-function getReverseWordOrder(string)
+function reverseWordOrder(string)
 {
     let reverseWords = [], words = string.split(" ");
     for(let index = 0; index < words.length; index++)
