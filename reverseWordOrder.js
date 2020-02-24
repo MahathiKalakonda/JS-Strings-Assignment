@@ -1,10 +1,17 @@
-function reverseWordOrder(string)
+function getReverse(elements)
 {
-    let reverseWords = [], words = string.split(" ");
-    for(let index = 0; index < words.length; index++)
+    let reversedElements = [];
+    for(let index = 0; index < elements.length; index++)
     {
-        reverseWords.unshift(words[index]);
+        reversedElements.unshift(elements[index]);
     }
+    return reversedElements;
+}
+
+function reverseWordOrder(sentence)
+{
+    let words = sentence.split(" ");
+    let reverseWords = getReverse(words);
     reversedWords = reverseWords.join(" ");
     return reversedWords;
 }
