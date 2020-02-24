@@ -4,8 +4,8 @@ function strikeOut(sentence, strikeSymbol)
     for(let index = 0; index < sentence.length; index++)
     {
         if(sentence[index] == strikeSymbol)
-            resultSentence.concat('-');
-        else  resultSentence.concat(sentence[index]);
+            resultSentence = resultSentence + '-';
+        else  resultSentence = resultSentence + sentence[index];
     }
     return resultSentence;
 }
