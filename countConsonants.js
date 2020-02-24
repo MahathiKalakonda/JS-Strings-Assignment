@@ -1,9 +1,8 @@
-function getConsonantsCount(word)
+function getMatchedCount(regularExpression, word)
 {
-    let consonantsRegEx = /[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]/g;
-    let consonantsInWord = word.match(consonantsRegEx);
-    let consonantsCount = consonantsInWord.length;
-    return consonantsCount;
+    let matchedWords = word.match(regularExpression);
+    let vowelsCount = matchedWords.length;
+    return vowelsCount;
 }
 
 function printConsonantCount(word, count)
@@ -13,9 +12,8 @@ function printConsonantCount(word, count)
 
 function main()
 {
-    let word = "Water BoTtle";
-    let consonantCount = getConsonantsCount(word);
-    printConsonantCount(word, consonantCount);
+    let word = "Water BoTtle", consonantsRegExp = /[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]/g;
+    console.log("Number of consonants in " + word +" is : " + getMatchedCount(consonantsRegExp, word));
 }
 
 main()
