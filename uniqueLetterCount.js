@@ -17,7 +17,7 @@ function computeUniqueElementCount(elements)
 
 function getUniqueLetterCount(sentence)
 {
-    let lowerCaseSentence = sentence.toLowerCase(), lowerCaseLettersPattern = /[a-z]/g;
+    let lowerCaseSentence = sentence.toLowerCase();
     let letters = getMatchedWords(/[a-z]/g, lowerCaseSentence);
     let uniqueLetterCount = computeUniqueElementCount(letters);
     return uniqueLetterCount;
