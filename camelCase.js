@@ -14,11 +14,6 @@ function getCamelCase(words)
     return camelCase;
 }
 
-function printCamelCaseWord(camelCaseWord)
-{
-    console.log("Camel case word is : " + camelCaseWord);
-}
-
 function main()
 {
     console.log("Camel case word is : " + getCamelCase(["this", "is", "mY", "sandWich"]));
