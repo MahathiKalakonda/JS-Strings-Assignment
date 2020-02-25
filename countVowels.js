@@ -1,10 +1,9 @@
 function getMatchedCount(regularExpression, word)
 {
     let matchedWords = word.match(regularExpression);
-    let vowelsCount = matchedWords.length;
-    return vowelsCount;
+    let matchedCount = matchedWords.length;
+    return matchedCount;
 }
-
 
 function main()
 {
