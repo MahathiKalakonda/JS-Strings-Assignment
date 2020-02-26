@@ -18,7 +18,7 @@ function main()
 
 //module.exports = getMatchedCount;
 
-exports = {
+module.exports = {
          getMatchedCount,
          main
          }
