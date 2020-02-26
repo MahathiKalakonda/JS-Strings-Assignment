@@ -9,9 +9,8 @@
 object = require('./countConsonants');
 function main()
 {
-console.log(object);
     let word = "CoffEe", vowelsPattern = /[aeiouAEIOU]/g;
-//    console.log("Number of vowels in " + word +" is : " + object.getMatchedCount(vowelsPattern, word));
+    console.log("Number of vowels in " + word +" is : " + object.getMatchedCount(vowelsPattern, word));
 }
 
 main()
