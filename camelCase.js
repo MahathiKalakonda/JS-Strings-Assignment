@@ -1,5 +1,6 @@
 function getTitleCase(word)
 {
+    word = word.toLowerCase();
     return word[0].toUpperCase()+word.slice(1);
 }
 
@@ -8,7 +9,7 @@ function getCamelCase(words)
     camelCase = words[0].toLowerCase();
     for(let index = 1; index < words.length; index++)
     {
-        let titleCaseWord = getTitleCase(words[index].toLowerCase());
+        let titleCaseWord = getTitleCase(words[index]);
         camelCase = camelCase.concat(titleCaseWord);
     }
     return camelCase;
