@@ -1,12 +1,18 @@
+function isSame(firstWord, secondWord)
+{
+    return firstWord.split("").every(function (element, index)
+                    {
+                    return element == this[index];
+                    },secondWord);
+}
+
 function computeWordFrequency(sentence, word)
 {
-    let words = sentence.split(" "), frequency = 0;
-    for(let index = 0; index < words.length; index++)
-    {
-        if(words[index] == word)
-            frequency++;
-    }
-    return frequency;
+    let words = sentence.split(" ");
+    return words.reduce(function (frequency, element)
+                   {
+                   return isSame(element, word) ? ++frequency : frequency;
+                   },0);
 }
 
 function main()
