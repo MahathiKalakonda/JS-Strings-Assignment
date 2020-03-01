@@ -13,4 +13,6 @@ function main()
     console.log("Reverse of Thank You is : " + getReverseWord("Thank You"));
 }
 
-main();
+module.exports = {
+         getReverseWord
+         };
