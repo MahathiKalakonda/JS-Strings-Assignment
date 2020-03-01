@@ -1,25 +1,14 @@
-function getReverse(elements)
+function getReverseWordSentence(sentence)
 {
-    let reversedElements = [];
-    for(let index = 0; index < elements.length; index++)
-    {
-        reversedElements.unshift(elements[index]);
-    }
-    return reversedElements;
-}
-
-function reverseWordOrder(sentence)
-{
-    let words = sentence.split(" ");
-    let reverseWords = getReverse(words);
-    reversedWords = reverseWords.join(" ");
-    return reversedWords;
+    return sentence.split(" ").reduce(function(resultSentence, word)
+                {   return word + " " + resultSentence;
+                });
 }
 
 function main()
 {
     let string = "Joey does not share  food";
-    console.log("The reverse order of string : " + string + " is : " + getReverseWordOrder(string));
+    console.log("The reverse order of string : " + string + " is : " + getReverseWordSentence(string));
 }
 
 main()
