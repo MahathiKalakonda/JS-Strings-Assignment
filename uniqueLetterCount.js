@@ -1,25 +1,13 @@
-function getMatchedWords(pattern, word)
-{
-    let matchedWords = word.match(pattern);
-    return matchedWords;
-}
-
 function computeUniqueElementCount(elements)
 {
-    let uniqueElements = [];
-    for(let index = 0; index < elements.length; index++)
-    {
-        if(uniqueElements.indexOf(elements[index]) == -1)
-            uniqueElements.push(elements[index]);
-    }
-    return uniqueElements.length;
+    let letters = new Set(elements);
+    return Array.from(letters).length;
 }
 
 function getUniqueLetterCount(sentence)
 {
-    let lowerCaseSentence = sentence.toLowerCase();
-    let letters = getMatchedWords(/[a-z]/g, lowerCaseSentence);
-    let uniqueLetterCount = computeUniqueElementCount(letters);
+    let lowerCaseSentence = sentence.toLowerCase(), pattern = /[a-z]/g;
+    let uniqueLetterCount = computeUniqueElementCount(lowerCaseSentence.match(pattern));
     return uniqueLetterCount;
 }
 
