@@ -1,11 +1,3 @@
-//function getMatchedCount(regularExpression, word)
-//{
-//    let matchedWords = word.match(regularExpression);
-//    let matchedCount = matchedWords.length;
-//    return matchedCount;
-//}
-
-
 object = require('./countConsonants');
 function main()
 {
@@ -13,4 +5,4 @@ function main()
     console.log("Number of vowels in " + word +" is : " + object.getMatchedCount(vowelsPattern, word));
 }
 
-main()
+main();
