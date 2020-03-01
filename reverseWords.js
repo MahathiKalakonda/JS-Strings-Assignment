@@ -1,23 +1,10 @@
-function getReverse(elements)
-{
-    let reversedElements = [];
-    for(let index = 0; index < elements.length; index++)
-    {
-        reversedElements.unshift(elements[index]);
-    }
-    return reversedElements;
-}
+object = require('./reverseString');
 
 function reverseWords(sentence)
 {
-    let words = sentence.split(" "), reversedWords = [];
-    for(let index = 0; index < words.length; index++)
-    {
-        let word = words[index].split("");
-        let reversedWord = getReverse(word).join("");
-        reversedWords.push(reversedWord);
-    }
-    return reversedWords.join(" ");
+    return sentence.split(" ").reduce(function(reverseWordSentence, word)
+            {   return reverseWordSentence + object.getReverseWord(word) + " ";
+            }, '');
 }
 
 function main()
