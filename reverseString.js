@@ -1,11 +1,9 @@
 function getReverseWord(word)
 {
-    let reversedWord = "";
-    for(let index = 0; index < word.length; index++)
-    {
-        let complimentaryIndex = word.length - index - 1;
-        reversedWord = reversedWord.concat(word[complimentaryIndex]);
-    }
+    let reversedWord = '';
+    reversedWord = word.split('').reduce(function(reversedWord,element)
+                        {   return element+reversedWord;
+                        });
     return reversedWord;
 }
 
