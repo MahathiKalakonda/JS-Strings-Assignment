@@ -1,13 +1,9 @@
 function strikeOut(sentence, strikeSymbol)
 {
-    var strikeSymbol = strikeSymbol[0], resultSentence = '';
-    for(let index = 0; index < sentence.length; index++)
-    {
-        if(sentence[index] == strikeSymbol)
-            resultSentence = resultSentence + '-';
-        else  resultSentence = resultSentence + sentence[index];
-    }
-    return resultSentence;
+    var strikeSymbol = strikeSymbol[0];
+    return sentence.split('').reduce(function(resultSentence, letter)
+                {       return resultSentence + (letter == strikeSymbol ? '-' : letter);
+                }, '');
 }
 
 function main()
