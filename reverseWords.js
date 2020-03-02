@@ -4,7 +4,7 @@ function reverseWords(sentence)
 {
     return sentence.split(" ").reduce(function(reverseWordSentence, word)
             {   return reverseWordSentence + object.getReverseWord(word) + " ";
-            }, '');
+            }, '').slice(0, sentence.length);
 }
 
 function main()
